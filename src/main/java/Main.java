@@ -1,3 +1,5 @@
+import jFrames.Settings;
+import jFrames.jFrame;
 
 import javax.swing.*;
 

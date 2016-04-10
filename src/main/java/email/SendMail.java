@@ -1,3 +1,9 @@
+package email;
+import data.DAO;
+import jFrames.Settings;
+import jFrames.jFrame;
+import jFrames.*;
+
 import javax.mail.*;
 import javax.mail.PasswordAuthentication;
 import javax.mail.internet.InternetAddress;
@@ -13,7 +19,7 @@ import java.util.Properties;
 public class SendMail {
         static final String ENCODING = "UTF-8";
 
-    static void Send(ArrayList<DAO> list) throws MessagingException, UnsupportedEncodingException {
+    public static void Send(ArrayList<DAO> list) throws MessagingException, UnsupportedEncodingException {
         DAO dao;
         for(DAO alist : list){
             dao = alist;

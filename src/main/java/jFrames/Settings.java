@@ -1,3 +1,5 @@
+package jFrames;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.FileInputStream;
@@ -9,14 +11,14 @@ import java.util.Properties;
 /**
  * Created by Вадим on 10.04.2016.
  */
-class Settings extends JFrame {
+public class Settings extends JFrame {
     private static String smtpHost;
     private static String addressFrom;
     private static String login;
     private static String password;
     private static String domain;
     private JComboBox<String> domainBox= new JComboBox<>();
-    static String getPassword() {
+    public static String getPassword() {
         return password;
     }
 
@@ -30,24 +32,24 @@ class Settings extends JFrame {
         return domain;
     }
 
-    static String getSmtpHost() {
+    public static String getSmtpHost() {
         return smtpHost;
     }
 
-    static String getSmtpPort() {
+    public static String getSmtpPort() {
         return "25";
     }
 
 
-    static String getLogin() {
+    public static String getLogin() {
         return login;
     }
 
-    static String getAddressFrom() {
+    public static String getAddressFrom() {
         return addressFrom;
     }
 
-    static void getSettings() {
+    public static void getSettings() {
         FileInputStream fis;
         Properties property = new Properties();
 

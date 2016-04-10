@@ -1,9 +1,11 @@
+package parser;
 
+import data.DAO;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.apache.poi.ss.usermodel.Row;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -73,13 +75,14 @@ public class Parser {
     static long converter(double d){
         long lon;
         while(true){
-            d*=10;
-            if (d%10==0){
-                lon = (long)d;
+
+            if (d%10 !=0) {
+                lon = (long) d;
                 break;
-            }
-
-        }return lon;
-    }
-
+            } else
+                d*=10;
+            }return lon;
+      }
 }
+
+

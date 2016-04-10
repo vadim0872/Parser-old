@@ -1,6 +1,10 @@
+package jFrames;
+import parser.*;
+import email.*;
+import data.DAO;
+
 import javax.mail.AuthenticationFailedException;
 import javax.mail.MessagingException;
-
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import java.awt.*;
@@ -19,17 +23,17 @@ public class jFrame extends JFrame {
         private static String themeText;
         FileInputStream fis;
 
-        jFrame() {
+        public jFrame() {
             super("Тестовый парсер");
             setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             initjFrame();
         }
 
-        static String getThemeText() {
+        public static String getThemeText() {
             return themeText;
         }
 
-        static String getMessageText() {
+        public static String getMessageText() {
             return messageText;
         }
 
